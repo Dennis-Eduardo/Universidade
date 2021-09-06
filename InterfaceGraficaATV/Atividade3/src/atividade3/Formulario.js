@@ -1,5 +1,7 @@
 import React from 'react';
 import { Formik, Field, ErrorMessage } from 'formik';
+import "./style.css";
+
 
 const Formulario = () => {
     const validarCampo = (value) =>{
@@ -9,7 +11,6 @@ const Formulario = () => {
         }
         return error;
     }
-
     const validarIdade = (value)=>{
         let error;
         if(!value){
@@ -66,8 +67,6 @@ const Formulario = () => {
         }
         return error;
     }
-    
-    
     const handleSubmitting = (values, {setSubmitting}) =>{
         setTimeout(() =>{
             console.info(JSON.stringify(values,null,12));
@@ -76,12 +75,14 @@ const Formulario = () => {
     };
 
     return (
-        <Formik  initialValues ={{nome: '', idade:'', cpf: '', matricula:'', curso:'', endereco:'',
+        <div className="body">
+            <div className="formulario">
+            <Formik  initialValues ={{nome: '', idade:'', cpf: '', matricula:'', curso:'', endereco:'',
                                   numeroEnd:'', complementoEnd:'', bairro:'', cidade:'', estado:'', cep:''}}
                  onSubmit ={handleSubmitting}>
             {({values, handleChange, handleSubmit,handleBlur, isSubmitting}) => (
                 <form onSubmit={handleSubmit}>
-                    <label>
+                    <label className="nome">
                         Nome Completo*:
                             <Field type="text" name ="nome"
                                 validate={validarCampo}
@@ -206,6 +207,9 @@ const Formulario = () => {
                 </form>
             )}
         </Formik>
+            </div>
+        </div>
+        
     );
 }
 
