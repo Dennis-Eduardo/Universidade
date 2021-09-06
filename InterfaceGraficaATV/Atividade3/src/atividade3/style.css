@@ -1,1 +1,24 @@
-#Dennis
+.body{
+    margin: 0;/definir margin e padding em 0 como padrão caso o navegador seja diferente/
+    padding: 0;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);/Plano de fundo com gradiente/
+    background-size: cover;/tamanho da tela de fundo cover(cobrindo)/
+    font-family: "Comfortaa", sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+.formulario{/box da div de login/
+    width: 420px;/largura da box do login/
+    height: 520px;/altura da box de login/
+    /border: 2px solid rgb(89, 255, 241);//borda da box de login largura de 2px style:solid e cor rgb/
+    border-radius: 80px;/deixar a box curvada/
+    color:rgb(255, 255, 255);/cor do texto da box/
+    background-color: rgba(0, 0, 0, 0.514);/cor de fundo da box/
+    position: relative;/modelo do layout/
+    top: 120px;/posicao a partir do topo até +400px/
+    left: 520px;/posicao a partir da esquerda até +200px a direita/
+    box-sizing: border-box;/define a box com o border box/
+    padding: 68px 40px;/distancia entre o texto e a borda/
+
+}
